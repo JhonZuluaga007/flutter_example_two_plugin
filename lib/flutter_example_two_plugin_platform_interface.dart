@@ -1,3 +1,4 @@
+import 'package:flutter/material.dart';
 import 'package:plugin_platform_interface/plugin_platform_interface.dart';
 
 import 'flutter_example_two_plugin_method_channel.dart';
@@ -8,7 +9,8 @@ abstract class FlutterExampleTwoPluginPlatform extends PlatformInterface {
 
   static final Object _token = Object();
 
-  static FlutterExampleTwoPluginPlatform _instance = MethodChannelFlutterExampleTwoPlugin();
+  static FlutterExampleTwoPluginPlatform _instance =
+      MethodChannelFlutterExampleTwoPlugin();
 
   /// The default instance of [FlutterExampleTwoPluginPlatform] to use.
   ///
@@ -25,5 +27,9 @@ abstract class FlutterExampleTwoPluginPlatform extends PlatformInterface {
 
   Future<String?> getPlatformVersion() {
     throw UnimplementedError('platformVersion() has not been implemented.');
+  }
+
+  Future<Color> generateColor() {
+    throw UnimplementedError('generateColor() has not been implemented.');
   }
 }

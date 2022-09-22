@@ -10,7 +10,7 @@ class FlutterExampleTwoPlugin {
     return FlutterExampleTwoPluginPlatform.instance.getPlatformVersion();
   }
 
-  static Future<Color> generateColor() async {
+  Future<Color> generateColor() async {
     final randomColor = await _methodChannel.invokeMethod("generateColor");
     return Color.fromRGBO(randomColor[0], randomColor[1], randomColor[2], 1.0);
   }
